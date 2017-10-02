@@ -77,6 +77,7 @@ public extension Swifter {
         parameters["count"] ??= count
         parameters["include_entities"] ??= includeEntities
         parameters["include_rts"] ??= includeRTs
+        parameters["tweet_mode"] ??= "extended"
 
         self.getJSON(path: path, baseURL: .api, parameters: parameters, success: { json, _ in success?(json) }, failure: failure)
     }
